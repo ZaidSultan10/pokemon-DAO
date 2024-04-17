@@ -33,7 +33,7 @@ const SearchBar : React.FC = () => {
         <SearchBarSection>
             <SearchBarInput placeholder="Pokemon..." onChange={handleSearch} value={search} />
             {
-                debouncedValue && (
+                debouncedValue && pokemon && pokemon.length > 0 && (
                     <SearchBarContainer loading = {loading} pokemon = {pokemon} />
                 )
             }
